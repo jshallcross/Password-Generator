@@ -40,6 +40,25 @@ var passwordLength = prompt("How long a password (Min 8 - Max 128?");
   
     var confirmSymbols = (confirm("Click okay to add symbols to your password"));
   }
+console.log(confirmLowerCase);
+console.log(confirmNumbers);
+console.log(confirmSymbols);
+console.log(confirmNumbers); 
+  
+//If statements to determine which charachter ooptions user has made
+//combines empty array with the character arrays based on user input
+if (confirmLowerCase){
+  characterArray = characterArray.concat(lowercaseArray);
+}
+if (confirmUpperCase){
+  characterArray = characterArray.concat(uppercaseArray);
+}
+if(confirmNumbers){
+  characterArray = characterArray.concat(numbersArray);
+}
+if (confirmSymbols){
+  characterArray = characterArray.concat(symbolsArray);
+}
 
 
 }
