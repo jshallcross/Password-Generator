@@ -21,6 +21,27 @@ var passwordLength = prompt("How long a password (Min 8 - Max 128?");
   }
   alert("Your password will be " + passwordLength + " chraracters long.");
 
+  var confirmLowerCase = (confirm("Click Okay to include lowercase charachters"));
+  
+  var confirmUpperCase = (confirm("Click Okay to include UPPERCASE characters"));
+   
+  var confirmNumbers = (confirm("Click Okay to include numbers"));
+  
+  var confirmSymbols = (confirm("Click okay to add symbols to your password"));
+    // Loop to verify at least one character option was chosen
+    while (confirmLowerCase === false && confirmUpperCase === false && confirmNumbers === false && confirmSymbols === false){
+    alert("You must select Okay for at least 1");
+    // Asks again if the user does not select at least 1 character option
+    var confirmLowerCase = (confirm("Click Okay to include lowercase charachters"));
+  
+    var confirmUpperCase = (confirm("Click Okay to include UPPERCASE characters"));
+  
+    var confirmNumbers = (confrim("Click Okay to include numbers"));
+  
+    var confirmSymbols = (confirm("Click okay to add symbols to your password"));
+  }
+
+
 }
 // Write password to the #password input
 function writePassword() {
