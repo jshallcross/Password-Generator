@@ -13,7 +13,15 @@ var symbolsArray = ["!","@","#","$","%","^","&","*","(",")","_","-","+","=","{",
 var characterArray = [];
 var userPasswordArray = [];
 
+// Prompt for user to choose length of their password
+var passwordLength = prompt("How long a password (Min 8 - Max 128?");
+  // loop to verify user has chosen a length of between 8 and 128 charachters
+  while (!passwordLength || parseInt(passwordLength) < 8 || parseInt(passwordLength) >= 129) {
+    var passwordLength = parseInt(prompt("How long a password (Min 8 - Max 128?"));
+  }
+  alert("Your password will be " + passwordLength + " chraracters long.");
 
+}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
