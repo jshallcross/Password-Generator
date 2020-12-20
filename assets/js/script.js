@@ -1,7 +1,7 @@
 // Assignment code here
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
+//Generate Password Function
 function generatePassword(){
 // Charachter Arrays
 var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -40,10 +40,6 @@ var passwordLength = prompt("How long a password (Min 8 - Max 128?");
   
     var confirmSymbols = (confirm("Click okay to add symbols to your password"));
   }
-console.log(confirmLowerCase);
-console.log(confirmNumbers);
-console.log(confirmSymbols);
-console.log(confirmNumbers); 
   
 //If statements to determine which charachter ooptions user has made
 //combines empty array with the character arrays based on user input
@@ -59,7 +55,12 @@ if(confirmNumbers){
 if (confirmSymbols){
   characterArray = characterArray.concat(symbolsArray);
 }
-
+//for loop to generate the random characters for the password
+for(var i=0;i<passwordLength;i++){
+  userPasswordArray.push(characterArray[Math.floor(Math.random() * characterArray.length)]);
+}
+// join method return a string from array created for the users password
+return userPasswordArray.join("");
 
 }
 // Write password to the #password input
@@ -68,7 +69,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
