@@ -1,4 +1,5 @@
 # Password Generator Starter Code
+# university of Toronto Coding Bootcamp Challenge Week 3 
 ## Function
 Once the user clicks the "Generate Password" button they are prompted for information.
 The user must select a password length from 8 - 128 characters.
